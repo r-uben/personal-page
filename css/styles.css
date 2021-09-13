@@ -1,27 +1,100 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300&family=Work+Sans:wght@300&display=swap');
-@import url(menu.css);
 @import url(name.css);
-@import url(uni.css);
-@import url(descr.css);
 @import url(photo.css);
-@import url(mail.css);
 
-* {
-    margin: 0;
-    padding: 0;
+/*===== VARIABLES CSS =====*/
+:root {
+    --header-height: 3rem;
+    
+    /*========== Colors ==========*/
+    --title-color: #0B0A0A;
+    --text-color: #403A3A;
+    --text-color-light: #707070;
+    --container-color: #FAFAFA;
+    --container-color-alt: #F0EFEF;
+    --body-color: #FCFCFC;
+    --header-color: #181818;
+    --text-header-color: #BFBFBF;
+  
+    /*========== Font and typography ==========*/
+    --body-font: 'IBM Plex Sans Arabic', sans-serif;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+  
+    /*========== Font weight ==========*/
+    --font-medium: 500;
+    --font-semi-bold: 600;
+  }
+
+.main-page{
+    display: none;
+    position: absolute;
+    top: 2.2rem;
+    left:0;
+    font-size: 1.2rem;
+    color: var(--body-color);
+    cursor: pointer;
+  }
+
+  .l-main{
+    position: absolute;
+    left:0;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    background: var(--body-color);
+    cursor: pointer;
+  }
+
+
+/*========== Variables Dark theme ==========*/
+body.dark-theme{
+    --title-color: #F2F2F2;
+    --text-color: #BFBFBF;
+    --text-color-light: #cecece;
+    --container-color: #212121;
+    --container-color-alt: #181616;
+    --body-color: #2B2B2B;
+  }
+  
+  /*========== Button Dark/Light ==========*/
+  .change-theme{
+    position:relative;
+    right: 2.5rem;;
+    top:-5rem;
+    display:flex;
+    color: var(--text-color);
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+  .change-theme:hover{
+    color: var(--title-color);
+  }
+
+  *,::before,::after{
     box-sizing: border-box;
-}
+    
+    padding: 0;
+  }
+  
+  html{
+    scroll-behavior: smooth;
+  }
 
 body{
     font-family: 'IBM Plex Sans Arabic', sans-serif;
     font-size: 10px;
+    color: var(--body-color);
 }
 
 header{
     width: 100%;
     height: 100px;
-    background: rgb(37, 37, 37);
-    color: #fff;
+    background: var(--header-color);
+    color: var(--text-header-color);
 
     position: fixed;
     top: 0;
@@ -52,7 +125,11 @@ footer .contenedor {
     position: absolute;
     flex-wrap: wrap;
     justify-content: center;
-    padding-bottom: 25px;
+    right: 0;
+    left: 0;
+    width: 100%;
+    padding-bottom: 100px;
+    background: var(--body-color);
 }
 
 
@@ -63,6 +140,184 @@ footer .contenedor {
 }
 
 .social a {
-    color: #333;
+    color: var(--title-color);
     text-decoration: none;
+}
+
+
+
+/*== Uni */
+
+
+#header-uni{
+    display: none;
+}
+
+.uni{
+    position: fixed;
+    top: 65px;
+}
+
+
+.uni p {
+    display: block;
+    color: ---;
+    height: 50px;
+    margin-top: -10px;
+    margin-left: 10px;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+/*
+DESCRIPTION
+*/
+
+#descr{
+    display: inline-block;
+    text-align: justify;
+    width: auto;
+    position: center;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 20vh;
+    background: var(--body-color);
+}
+
+.english{
+    position:relative;
+    top: 0px;
+    color: var(--text-color);
+}
+
+.italiano{
+    position:relative;
+    top: 30px;
+    color: var(--text-color);
+}
+
+.español{
+    position:relative;
+    top: 60px;
+    color: var(--text-color);
+}
+
+
+
+#descr h2 {
+    font-size: 25px;
+    text-align: center;
+}
+
+#descr p {
+    font-size: 13px;
+}
+
+
+/*
+MAIL
+*/
+
+#contact{
+    width:auto;
+    text-align: center;
+    font-size: 10px;
+    margin-top: 5vh;
+}
+
+#contact p{
+    font-size: 15px;
+    font-style:initial;
+}
+
+.email {
+    position: relative;
+    color: var(--text-color);
+}
+.email a{
+    position: relative;
+    color: var(--text-color);
+}
+
+/*
+    MENU
+*/
+#menu-bar{
+    display: none;
+}
+
+.menu-button{
+    cursor: pointer;
+}
+
+header label {
+    float: right;
+    padding: 0%;
+    font-size: 35px;
+    margin: 18px 0;
+    cursor: 3pointer;
+}
+.menu{
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(51, 51, 51, 0.9);
+    transition: all 0.5s;
+    transform: translateX(100%);
+}
+
+
+.menu a {
+    display: block;
+    color: #fff;
+    height: 50px;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 20px;
+    border-bottom: 2 px solid rgba(255, 255, 255, 0.5);
+}
+
+.menu a:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+#menu-bar:checked ~ .menu {
+    transform: translateX(0%)
+}
+
+@media (min-width:1024px) {
+    .menu {
+        position: static;
+        width: auto;
+        height: auto;
+        margin-top: 20px;
+        transform: translateX(0%);
+        float: right;
+        display: flex;
+        background: var(--header-color);
+    }
+
+    .menu a:hover {
+        background: var(--header-color);
+    }
+
+    .menu a {
+        border: none;
+    }
+
+    header label {
+        display: none;
+    }
+
+    .change-theme{
+        position:absolute;
+        right: 1rem;;
+        top:6.5rem;
+        display:flex;
+        color: var(--text-color);
+        font-size: 1.2rem;
+        cursor: pointer;
+      }
 }

@@ -7,6 +7,8 @@
     <title>Personal Page</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/fontello.css">
+    <!--========== BOX ICONS ==========-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
 </head>
 <body>
 
@@ -23,15 +25,17 @@
                 <p href=""> PhD student in Finance at Università Bocconi</p>
             </nav>
             <input type="checkbox" id="menu-bar">
-            <label class="icon-menu" for="menu-bar"></label>
+            <label class="menu-button" for="menu-bar">
+              <i class='bx bx-menu menu-button'></i>
+            </label>
             <nav class="menu">
                 <a href="https://r-uben.github.io/CV/">CV</a>
                 <a href="">Research</a>
-            </nav>
+            <i class='bx bx-moon change-theme' title="Theme" id="theme-button" ></i>
     </div>
 </header>
 
-  <main>
+  <main class="l-main bd-container">
       <!-- <section id="photo">
         <img src="img/img1.jpg">
       </section> -->
@@ -39,49 +43,64 @@
       <section id="descr">
             <div class="english">
                 <h2>Welcome to my personal webpage!</h2>
-                <p>My name is Reuben Fernandez Fuertes, and 
-                  I am a 1st year PhD student at Bocconi University (Milan, Italia). 
+                <p style="text-indent: 40px">My name is Reuben Fernandez Fuertes, and 
+                  I am a 1st year PhD student in Finance at Bocconi University (Milan, Italia). 
                   I hold a BSc degree in Mathematics from the Autonomous University of Madrid (2015-2019), a MSc in Teacher Training (2019-2020)
                   from the European University, and a MSc in Mathematical Finance from the University
                   of Manchester (2020-2021)
+                </p>
+                <p style="text-indent: 40px">
+                  In this website you can found more information about my career. Briefly speaking, I am interested in the deep conection between Mathematics and Finance (Quantitative Finance, Mathematical Finance) 
+                  within highly interesting disciplines such as Valuation of options, Modern Portfolio Theory, Climate Finance, etc.
                 </p>
             </div>
 
           <div class="italiano">
             <h2>Benvenuto al mio sito personale!</h2>
-            <p>Mi chiamo Ruben Fernandez Fuertes, e
-              Sono uno studente di dottorato di primo anno all'Università Bocconi (Milano, Italia). 
+            <p style="text-indent: 40px">Mi chiamo Ruben Fernandez Fuertes, e sono uno studente di dottorato in Finanze di primo anno all'Università Bocconi (Milano, Italia). 
             Ho una laurea in Matematica all'Università Autonoma di Madrid (2015-2019), un master in formazione
-            degli insegnanti all'Università Europea (2019-2020), e anche un master in Matematica finanziaria all'            Università di Manchester (2020-2021).
+            degli insegnanti all'Università Europea (2019-2020), e anche un master in Matematica finanziaria all'Università di Manchester (2020-2021).</p>
+
+            <p style="text-indent: 40px">In questo sito potrebbe trovare più informazioni sul mio percorso. Brevemente, si potrebbe dire che i miei interesi sono in torno alla conessione che v'è 
+            tra la Matematica e le Finanze (<i>Quantitative Finance</i>, <i>Mathematical Finance</i>, etc.) in sottodiscipline tanto fertile come <i>Option valuation</i>, 
+            <i>Modern Portfolio Theory</i>, <i>Climate Finance</i>, etc.
             </p>
       </div>
 
       <div class="español">
         <h2>¡Bienvenido a mi página personal!</h2>
-        <p>Me llamo Rubén Fernández Fuertes. Soy un estudiante de primer año de doctorado en la Universidad Bocconi (Milán, Italia). Soy graduado en Matemáticas
+            <p style="text-indent: 40px"> Me llamo Rubén Fernández Fuertes. Soy un estudiante de primer año de doctorado en Finance en la Universidad Bocconi (Milán, Italia). Soy graduado en Matemáticas
             por la Universidad Autónoma de Madrid (2015-2019) y he obtenido dos maestrías: una en Formación del Profesorado por la Universidad Europea (2019-2020) y otra
-            en Matemática financiera por la Universidad de Mánchester (2020-2021).
+            en Matemática financiera por la Universidad de Mánchester (2020-2021). </p>
+
+            <p style="text-indent: 40px">En esta página puede encontrar más información sobre mi trayectoria y mi trabajo. Como breve resumen, podría decirse que mis intereses apuntan hacia la estrecha conexión
+            entre las Matemáticas y las Finanzas (Finanzas cuantitativas, Matemática financiera, &c.) que puede apreciarse en subdisciplinas tan fértiles como la valoración de opciones, 
+            teoría moderna de portafolios, financiamiento climático, &c.
         </p>
   </div>
       </section>
 
       <section id="contact">
           <div class="email">
-            <p>email:</p>
+            <p class="email">email:</p>
             <a href="mailto:ruben.fernandez@phd.unibocconi.it" target="_self">
                 <h2>ruben.fernandez@phd.unibocconi.it</h2>
             </a>
       </section>
+
+      <footer>
+        <div class="contenedor">
+            <div class="social">
+              <a class="bx bxl-github social__icon" href="https://github.com/r-uben"></a> 
+              <!-- <a class="icon-twitter-circled-1" href="https://twitter.com/r_uben__"></a> -->
+              <a class="bx bxl-linkedin social__icon" href="https://www.linkedin.com/in/rubén-fernández-fuertes/"></a>
+            </div>
+        </div>
+    </footer>
   </main>
 
-  <footer>
-      <div class="contenedor">
-          <div class="social">
-            <a class="icon-github-circled-alt2" href="https://github.com/r-uben"></a>
-            <a class="icon-twitter-circled-1" href="#"></a>
-            <a class="icon-linkedin-2" href="https://www.linkedin.com/in/rubén-fernández-fuertes/"></a>
-          </div>
-      </div>
-  </footer>
+  <!--========== MAIN JS ==========-->
+  <script src="js/main.js"></script>
 </body>
+
 </html>

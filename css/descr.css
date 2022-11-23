@@ -1,0 +1,28 @@
+#descr{
+    display: inline-block;
+    text-align: justify;
+    width: auto;
+    position: center;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 20vh;
+}
+
+.italiano{
+    position:relative;
+    top: 20px;
+}
+
+.español{
+    position:relative;
+    top: 40px;
+}
+
+
+#descr h2 {
+    font-size: 25px;
+}
+
+#descr p {
+    font-size: 13px;
+}

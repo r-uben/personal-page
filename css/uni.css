@@ -1,0 +1,18 @@
+#header-uni{
+    display: none;
+}
+
+.uni{
+    position: fixed;
+    top: 65px;
+}
+
+.uni p {
+    display: block;
+    color: ---;
+    height: 50px;
+    margin-top: -10px;
+    margin-left: 10px;
+    text-decoration: none;
+    font-size: 12px;
+}
